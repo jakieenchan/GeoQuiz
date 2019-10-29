@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,8 +13,8 @@ public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
-    private Button mNextButton;
-    private Button mPrevButton;
+    private ImageButton mNextButton;
+    private ImageButton mPrevButton;
     private TextView mQuestionTextView;
 
     private TrueFalse[] mQuestionBank = new TrueFalse[]{
@@ -81,7 +82,8 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         //引用prev按钮
-        mPrevButton = (Button)findViewById(R.id.prev_button);
+        mPrevButton = (ImageButton)findViewById(R.id.prev_button);
+        //实现跳转上一题
         mPrevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,7 +97,8 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         //引用next按钮
-        mNextButton = (Button)findViewById(R.id.next_button);
+        mNextButton = (ImageButton) findViewById(R.id.next_button);
+        //点击跳转下一题
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
