@@ -60,9 +60,8 @@ public class QuizActivity extends AppCompatActivity {
         //引用TextView，将文本内容设置为当前数组索引执行的问题
         mQuestionTextView = (TextView)findViewById(R.id.question_text_view) ;
 
-        //接收组件的资源ID作为参数，返回一个视图对象。==》引用指定按钮
-        //必须将返回的View转为Button
-        mTrueButton = (Button)findViewById(R.id.true_button);
+        //引用指定按钮
+        mTrueButton = (Button)findViewById(R.id.true_button);//接收组件的资源ID作为参数，返回一个视图对象.必须将返回的View转为Button
         //设置监听器
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
